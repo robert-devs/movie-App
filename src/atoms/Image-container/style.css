@@ -1,0 +1,12 @@
+.moviesDisplay{
+    
+    width: 80%;
+    height: 80%;
+     margin-top: 50px;
+     border-radius: 10px;
+    }
+    .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

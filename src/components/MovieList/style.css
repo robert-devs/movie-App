@@ -1,0 +1,14 @@
+.images{
+    width:100%;
+    overflow: hidden;
+    object-fit: contain;
+}
+img{
+    border-radius: 10px !important;
+    object-fit: cover;
+}
+
+h2{
+    text-align: center;
+    padding-top: 20px;
+}
