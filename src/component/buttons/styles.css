@@ -1,0 +1,18 @@
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin-right: 10px;
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.button.active {
+  background: blue;
+}
