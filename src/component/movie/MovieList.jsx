@@ -1,6 +1,7 @@
 import "./style.css";
 import FilterButtons from "../buttons";
 import ImageContainer from "../images/ImageContainer";
+import MovieCardDetail from "../cardDetail/CardDetail";
 import PaginationButtons from "../pagination";
 import React, { useEffect, useState } from "react";
 
@@ -12,6 +13,8 @@ const MovieList = () => {
   const [loading, setLoading] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+    const [selectedMovie, setSelectedMovie] = useState(null);
+
   const itemsPerPage = 6; // Set the number of items to show per page
 
   useEffect(() => {
@@ -60,23 +63,28 @@ const MovieList = () => {
     setCurrentPage(page);
   };
 
+  const handleCardClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
  return (
     <div className="container">
       <div className="page">
         <div className="moviesDisplay">
           {paginatedMovies.map((movie) => (
-            <div key={movie.id} className="card">
+            
+            <div className="card" >
               <div className="card-image">
                 <ImageContainer movie={movie} />
               </div>
               <h2>{movie.title}</h2>
-              <p>{movie.overview}</p>
+              <h2>{movie.release_date}</h2>
             </div>
           ))}
         </div>
         <div className="filters">
           <FilterButtons
-            filters={["All", "Action", "Comedy", "Drama"]}
+            filters={["All", "Action", "Comedy", "Drama","Arabic"]}
             selectedFilter={selectedFilter}
             setSelectedFilter={setSelectedFilter}
             setCurrentPage={setCurrentPage}
@@ -88,6 +96,7 @@ const MovieList = () => {
           />
         </div>
       </div>
+      {selectedMovie && <MovieCardDetail movie={selectedMovie} />}
     </div>
   );
 };
