@@ -12,3 +12,18 @@ h2{
     text-align: center;
     padding-top: 20px;
 }
+p{
+    text-emphasis: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+button{
+    padding:"20px";
+    border:none;
+    outline: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 80px;
+    margin: 20px;
+}

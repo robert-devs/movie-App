@@ -1,8 +1,7 @@
 import "./style.css";
 import React from "react";
 
-const imageBaseUrl =  process.env.REACT_APP_IMAGE_BASE_URL
-
+const imageBaseUrl =  "https://image.tmdb.org/t/p/w500"
 const ImageContainer = ({ movie }) => {
     return (
         <div key={movie.id} className="images">
