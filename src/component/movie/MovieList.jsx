@@ -77,8 +77,10 @@ const MovieList = () => {
               <div className="card-image">
                 <ImageContainer movie={movie} />
               </div>
-              <h2>{movie.title}</h2>
-              <h2>{movie.release_date}</h2>
+              <div className="details">
+                <h2>{movie.title}</h2>
+                {/* <h2>{movie.release_date}</h2> */}
+              </div>
             </div>
           ))}
         </div>

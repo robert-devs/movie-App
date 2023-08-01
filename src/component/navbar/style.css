@@ -1,0 +1,14 @@
+.nav{
+    display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 1200px;
+  z-index: 0;
+}
+input{
+    padding:10px 10px;
+    border-radius: 10px;
+    width: 100%;
+    border:none;
+    /* outline:none; */
+}
