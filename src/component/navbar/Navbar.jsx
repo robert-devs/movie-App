@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="nav">
-        <img src="logo.png" alt=" logo" />
+        <img src="profile.png" alt=" logo" />
        <div>
-        <div className="search">
+        <div>
           <input type="text" placeholder="Search a movie" />
         </div>
         <div>
